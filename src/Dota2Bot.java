@@ -106,9 +106,27 @@ public class Dota2Bot extends PircBot {
             int spaceind = message.indexOf(" ");
             String precommand = message.substring(0,spaceind);
             String command = precommand.replace("!","");
-            String heroselect = message.substring(spaceind+1,message.length()).toLowerCase();
+            String heroselect = new String();
+            String levelAsStr = new String();
+            int levelAsInt = 1;
+            if (message.contains("| level"))
+            {
+                int levelind = message.indexOf("| level");
+                levelAsStr = message.substring(levelind+8, message.length());
+                heroselect = message.substring(spaceind+1, levelind-1).toLowerCase();
+                levelAsInt = Integer.parseInt(levelAsStr);
+            }
+            else
+            {
+                heroselect = message.substring(spaceind+1,message.length()).toLowerCase();
+            }
             String heroIDnum = new String();
-
+            sendMessage(channel, levelAsStr);
+            if (levelAsInt < 1 || levelAsInt > 25)
+            {
+                sendMessage(channel, "Invalid level. Please enter a value between 1 and 25");
+                command = command + " ";
+            }
             switch(heroselect)
             {
                 case "am":
@@ -396,24 +414,48 @@ public class Dota2Bot extends PircBot {
                 sendMessage(channel, "That is not a hero. Are you using the correct spelling?");   
             }
             
+            //don't forget invalid levels
+            double levelcalcs = (double) levelAsInt;
             String renji = selectedHero.get("Range").toString();
             String movespeed = selectedHero.get("Movespeed").toString();
-            String armor = selectedHero.get("Armor").toString();
-            String health = selectedHero.get("HP").toString();
-            String mana = selectedHero.get("Mana").toString();
-            double armord = Double.parseDouble(armor);
-            double healthd = Double.parseDouble(health);
-            double ehp = healthd * (1 + 0.06 * armord);
             String bsstr = selectedHero.get("BaseStr").toString();
             String bsagi = selectedHero.get("BaseAgi").toString();
             String bsint = selectedHero.get("BaseInt").toString();
             String strgain = selectedHero.get("StrGain").toString();
             String agigain = selectedHero.get("AgiGain").toString();
             String intgain = selectedHero.get("IntGain").toString();
+            double prestr = Double.parseDouble(bsstr);
+            double preagi = Double.parseDouble(bsagi);
+            double preintel = Double.parseDouble(bsint);
+            double strg = Double.parseDouble(strgain);
+            double agig = Double.parseDouble(agigain);
+            double intg = Double.parseDouble(intgain);
+            double str = prestr + strg * (levelcalcs - 1);
+            double agi = preagi + agig * (levelcalcs - 1);
+            double intel = preintel + intg * (levelcalcs - 1);
+            double healthd = 150.0 + 19 * str; //Double.parseDouble(health);
+            double manad = 13 * intel;
+            String health = Double.toString(healthd);
+            String mana = Double.toString(manad);
+            String armor = selectedHero.get("Armor").toString();
+            double armord = Double.parseDouble(armor);
+            double armorlevel = 1.0;
+            if (levelAsInt == 1) 
+            {
+                armorlevel = armord;
+            }
+            else 
+            {
+                armorlevel = armord + 0.14 * agig * (levelcalcs - 1);
+            }
+            double ehp = healthd * (1 + 0.06 * armorlevel);
+            String armorOut = Double.toString(armorlevel);
+            String ehpstr = String.valueOf(ehp);
             String dayv = selectedHero.get("DayVision").toString();
             String nightv = selectedHero.get("NightVision").toString();
             String baseat = selectedHero.get("BaseAttackTime").toString();
             String turnr8 = selectedHero.get("Turnrate").toString();
+            
             switch (command)
             {
                /* case "help":
@@ -437,11 +479,11 @@ public class Dota2Bot extends PircBot {
                 break;
 
                 case "ehp":
-                    sendMessage(channel, String.valueOf(ehp)+1);
+                    sendMessage(channel, ehpstr);
                 break;
 
                 case "armor":
-                    sendMessage(channel, armor);
+                    sendMessage(channel, armorOut);
                 break;
 
                 case "hpm":
