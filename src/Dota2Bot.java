@@ -49,11 +49,14 @@ public class Dota2Bot extends PircBot {
             //original from http://dotaheroes.herokuapp.com/heroes/all, accessed June 24, 2013, with edits
             Object obj = parser.parse(new FileReader("/home/lemonade/Desktop/GitProjects/Dota2Bot/src/allDota2Heroes.json"));
             jsonObject = (JSONObject) obj;
+            
+            /* Because of how the json file is formatted, we have to
+            first create an arraylist to find the index of each hero.
+            This way, we can find the hero data based on the ID number. */ 
             for (int i = 0; i <= 100; i++)
             {
                 String count = (String) Integer.toString(i+1);
                 JSONObject test1 = (JSONObject) jsonObject.get(count);
-
                 String name = test1.get("Name").toString().toLowerCase();
                 heroes.add(name);
             }
@@ -72,18 +75,13 @@ public class Dota2Bot extends PircBot {
             e.printStackTrace();
         }
 
-/* 
-
         if (message.equalsIgnoreCase("!help"))
-        {            sendMessage(channel, "Commands! 
-                !attr: returns base attributes and gain / level; 
-                !ehp: returns the EHP of the hero; 
-                !hpm: returns the HP and Mana of the hero; 
-                !movespeed or !ms: returns the movespeed of the hero; 
-                !range: returns the range of the hero; 
-                !vision: returns the day and night vision of the hero;
-                !turnrate or !tr: returns the turnrate fo the hero");
-   
+        {            
+            sendMessage(channel, "Commands! !attr: returns base attributes and gain / level; !ehp: returns the EHP of the hero; !hpm: returns the HP and Mana of the hero; !movespeed or !ms: returns the movespeed of the hero; !range: returns the range of the hero; !vision: returns the day and night vision of the hero; !turnrate or !tr: returns the turnrate of the hero");
+        }
+/* 
+            ?commands as well
+            how to do | level
             sendMessage(channel, "Stuffs");
             sendMessage(channel, "!attr: returns base attributes and gain / level");
             sendMessage(channel, "!movespeed or !ms: retruns movespeed of the hero");
@@ -100,8 +98,94 @@ public class Dota2Bot extends PircBot {
             sendMessage(channel, "");
         }*/       
 
+        //spells that go through magic immunity
+        if (message.startsWith("?goesthroughmi"))
+        {
+            sendMessage(channel, "");
+        }
 
-        if (message.startsWith("!"))
+        if (message.startsWith("?damagetypes"))
+        {
+            sendMessage(channel, "Type ? followed by magical, " + 
+                "physical, pure, composite, hpremoval, or universal. " +
+                "For spells that deal these types of damage, type " +
+                "?physicalspells, etc. All spells not listed deal magical damage.");
+        }
+
+        if (message.startsWith("?magical"))
+        {
+            sendMessage(channel, "Magical damage is reduced by magic resistance, does not affect magic immune units, and deals 1.4x damage to Ethereal units.");
+        }
+
+        if (message.startsWith("?physical"))
+        {
+            sendMessage(channel, "More information of physical damage and armor types later~");
+        }
+
+        if (message.startsWith("?pure"))
+        {
+            sendMessage(channel, "Pure damage is a form of magical damage that is not reduced by magic resistance, does not affect magic immune units, and deals normal damage to Ethereal units.");
+        }
+
+        if (message.startsWith("?composite"))
+        {
+            sendMessage(channel, "Composite aka mixed damage is physical damage that is also reduced by magic resistance. It goes through magic immunity but does not hit Ethereal units.");
+        }
+
+        if (message.startsWith("?hpremoval"))
+        {
+            sendMessage(channel, "HP removal directly subtracts HP from the target. Therefore, it is not reduced by any resistances and goes through magic immunity.");
+        }
+
+        if (message.startsWith("?universal"))
+        {
+            sendMessage(channel, "Universal damage is reduced magic resistance and deals 1.4x damage to Ethereal units, but also goes through magic immunity.");
+        }
+
+        if (message.startsWith("?physicalspells"))
+        {
+            sendMessage(channel, "The following spells deal physical damage: " + 
+                "Unstable Concotion, Counter Helix, Quill Spray, Penitence, Searing Arrows " + 
+                "Poison Touch, Shadow Wave, Exorcism, Earth Splitter (half), Echo Stomp " + 
+                "(Titan only), Flak Cannon, Omnislash, Entangling Claws (bear), " + 
+                "Bash (Slardar), Slithereen Crush, Headshot, Meld, Death Ward, " +
+                "Anchor Smash, Walrus PUNCH!, Fury Swipes, The Swarm.");
+        }
+
+        if (message.startsWith("?purespells"))
+        {
+            sendMessage(channel, "The following spells deal pure damage: "+
+                "Brain Sap, Test of Faith, Impetus, Sun Strike, Spiked Carapace, "+
+                "Purification, Arcane Orb, Stifling Dagger, Meat Hook, Soul Catch, "+
+                "Glaives of Wisdom, Desolate, Dispersion, Psi Blades, Chakram, "+
+                "Timber Chain, Whirling Death, Laser.");
+        }
+
+        if (message.startsWith("?compositespells"))
+        {
+            sendMessage(channel, "The following spells deal composite damage: "+
+                "Acid Spray, Wild Axes, Diabolic Edict, Spirit Bear backlash.");
+        }
+
+        if (message.startsWith("?hpremovalspells"))
+        {
+            sendMessage(channel, "The following spells remove HP: "+
+                "Nightmare, Rupture, EMP, Heartstopper Aura, Soul Rip, "+
+                "Urn of Shadows's Soul Release, Wave of Terror, Fatal Bonds. "+
+                "The following inflict HP removal on the user: "+
+                "Armlet, Burning Spear, Overcharge, Soul Ring Sacrifice.");
+        }
+
+        if (message.startsWith("?universalspells"))
+        {
+            sendMessage(channel, "The following spells deal universal damage: "+
+                "Doom, Midnight Pulse, March of the Machines.");
+        }
+
+
+        /*  Instead of using if statements to look for the command
+        itself, we use a switch so we can detect hero nicknames. */
+        else if (message.startsWith("!"))
         {
             int spaceind = message.indexOf(" ");
             String precommand = message.substring(0,spaceind);
@@ -109,6 +193,7 @@ public class Dota2Bot extends PircBot {
             String heroselect = new String();
             String levelAsStr = new String();
             int levelAsInt = 1;
+            //for calculating stats at different levels. Have not implemented leveling stats.
             if (message.contains("| level"))
             {
                 int levelind = message.indexOf("| level");
@@ -127,6 +212,7 @@ public class Dota2Bot extends PircBot {
                 sendMessage(channel, "Invalid level. Please enter a value between 1 and 25");
                 command = command + " ";
             }
+            //accepted hero nicknames
             switch(heroselect)
             {
                 case "am":
@@ -409,12 +495,16 @@ public class Dota2Bot extends PircBot {
 
             JSONObject selectedHero = (JSONObject) jsonObject.get(heroIDnum);
 
+            /* We don't want any output to trigger if anything starts with !,
+            but we want to give an error when there is a valid command but the
+            hero does not exist. */
             if (selectedHero == null && isValidcommand().contains(command))
             {
                 sendMessage(channel, "That is not a hero. Are you using the correct spelling?");   
             }
             
-            //don't forget invalid levels
+            //probably organize these better and rename some of them
+            //probably a separate statlevel
             double levelcalcs = (double) levelAsInt;
             String renji = selectedHero.get("Range").toString();
             String movespeed = selectedHero.get("Movespeed").toString();
@@ -440,6 +530,7 @@ public class Dota2Bot extends PircBot {
             String armor = selectedHero.get("Armor").toString();
             double armord = Double.parseDouble(armor);
             double armorlevel = 1.0;
+            //inconveniently, base agility does not influence base armor
             if (levelAsInt == 1) 
             {
                 armorlevel = armord;
@@ -456,6 +547,9 @@ public class Dota2Bot extends PircBot {
             String baseat = selectedHero.get("BaseAttackTime").toString();
             String turnr8 = selectedHero.get("Turnrate").toString();
             
+            //finds commands to return the relevant stats. 
+            //to do: attributes at different levels (!attr, but don't)
+            //display + gain / level
             switch (command)
             {
                /* case "help":
@@ -511,6 +605,7 @@ public class Dota2Bot extends PircBot {
             }
         }       
     }     
+        /* valid commands are here for error checking */    
         public ArrayList<String> isValidcommand()
         {
             valid.add("attr");
