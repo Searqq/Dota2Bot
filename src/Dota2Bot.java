@@ -192,21 +192,35 @@ public class Dota2Bot extends PircBot {
             String command = precommand.replace("!","");
             String heroselect = new String();
             String levelAsStr = new String();
+            String statAsStr = new String();
             int levelAsInt = 1;
+            int statLevelInt = 0;
             //for calculating stats at different levels. Have not implemented leveling stats.
-            if (message.contains("| level"))
+            if (message.contains("| level") && message.contains(", "))
+            {
+                int levelind = message.indexOf("| level");
+                int statind = message.indexOf(", ");
+                levelAsStr = message.substring(levelind+8, statind);
+                statAsStr = message.substring(statind+2, message.length());
+                heroselect = message.substring(spaceind+1, levelind-1).toLowerCase();
+                levelAsInt = Integer.parseInt(levelAsStr);
+                statLevelInt = Integer.parseInt(statAsStr);
+            }
+            else if (message.contains("| level"))
             {
                 int levelind = message.indexOf("| level");
                 levelAsStr = message.substring(levelind+8, message.length());
-                heroselect = message.substring(spaceind+1, levelind-1).toLowerCase();
                 levelAsInt = Integer.parseInt(levelAsStr);
+                heroselect = message.substring(spaceind+1, message.length()).toLowerCase();
             }
             else
             {
-                heroselect = message.substring(spaceind+1,message.length()).toLowerCase();
+                heroselect = message.substring(spaceind+1, message.length()).toLowerCase();
             }
+
             String heroIDnum = new String();
             sendMessage(channel, levelAsStr);
+            sendMessage(channel, statAsStr);
             if (levelAsInt < 1 || levelAsInt > 25)
             {
                 sendMessage(channel, "Invalid level. Please enter a value between 1 and 25");
@@ -506,6 +520,7 @@ public class Dota2Bot extends PircBot {
             //probably organize these better and rename some of them
             //probably a separate statlevel
             double levelcalcs = (double) levelAsInt;
+            double statcalcs = (double) statLevelInt;
             String renji = selectedHero.get("Range").toString();
             String movespeed = selectedHero.get("Movespeed").toString();
             String bsstr = selectedHero.get("BaseStr").toString();
@@ -520,9 +535,9 @@ public class Dota2Bot extends PircBot {
             double strg = Double.parseDouble(strgain);
             double agig = Double.parseDouble(agigain);
             double intg = Double.parseDouble(intgain);
-            double str = prestr + strg * (levelcalcs - 1);
-            double agi = preagi + agig * (levelcalcs - 1);
-            double intel = preintel + intg * (levelcalcs - 1);
+            double str = prestr + strg * (levelcalcs - 1) + 2 * statcalcs;
+            double agi = preagi + agig * (levelcalcs - 1) + 2 * statcalcs;
+            double intel = preintel + intg * (levelcalcs - 1) + 2 * statcalcs;
             double healthd = 150.0 + 19 * str; //Double.parseDouble(health);
             double manad = 13 * intel;
             String health = Double.toString(healthd);
@@ -537,7 +552,7 @@ public class Dota2Bot extends PircBot {
             }
             else 
             {
-                armorlevel = armord + 0.14 * agig * (levelcalcs - 1);
+                armorlevel = armord + 0.14 * (agig * (levelcalcs - 1) + 2 * statcalcs);
             }
             double ehp = healthd * (1 + 0.06 * armorlevel);
             String armorOut = Double.toString(armorlevel);
