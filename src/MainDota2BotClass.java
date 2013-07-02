@@ -14,7 +14,7 @@ public class MainDota2BotClass {
         bot.connect("irc.synirc.net", 6661); 
 
         bot.joinChannel("#testla");
-        //bot.joinChannel("#smogdota");
+        bot.joinChannel("#smogdota");
         
     }
     

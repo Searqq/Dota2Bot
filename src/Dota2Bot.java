@@ -77,7 +77,18 @@ public class Dota2Bot extends PircBot {
 
         if (message.equalsIgnoreCase("!help"))
         {            
-            sendMessage(channel, "Commands! !attr: returns base attributes and gain / level; !ehp: returns the EHP of the hero; !hpm: returns the HP and Mana of the hero; !movespeed or !ms: returns the movespeed of the hero; !range: returns the range of the hero; !vision: returns the day and night vision of the hero; !turnrate or !tr: returns the turnrate of the hero");
+            sendMessage(channel, "Commands! !attr: returns base "+
+                "attributes and gain / level; !ehp: returns the "+
+                "EHP of the hero; !hpm: returns the HP and Mana "+
+                "of the hero; !movespeed or !ms: returns the "+
+                "movespeed of the hero; !range: returns the range "+
+                "of the hero; !vision: returns the day and night "+
+                "vision of the hero; !turnrate or !tr: returns the "+
+                "turnrate of the hero.");
+            sendMessage(channel, "Levels: To find the EHP or HP and mana "+
+                "of a hero at a certain level, use !command hero | level #. "+
+                "Stat levels can be entered by adding ', #', like | level 10, 3.");
+            sendMessage(channel, "For help on damage types, use ?damagetypes.");
         }
 /* 
             ?commands as well
@@ -104,7 +115,7 @@ public class Dota2Bot extends PircBot {
             sendMessage(channel, "");
         }
 
-        if (message.startsWith("?damagetypes"))
+        if (message.equalsIgnoreCase("?damagetypes"))
         {
             sendMessage(channel, "Type ? followed by magical, " + 
                 "physical, pure, composite, hpremoval, or universal. " +
@@ -112,37 +123,37 @@ public class Dota2Bot extends PircBot {
                 "?physicalspells, etc. All spells not listed deal magical damage.");
         }
 
-        if (message.startsWith("?magical"))
+        if (message.equalsIgnoreCase("?magical"))
         {
             sendMessage(channel, "Magical damage is reduced by magic resistance, does not affect magic immune units, and deals 1.4x damage to Ethereal units.");
         }
 
-        if (message.startsWith("?physical"))
+        if (message.equalsIgnoreCase("?physical"))
         {
             sendMessage(channel, "More information of physical damage and armor types later~");
         }
 
-        if (message.startsWith("?pure"))
+        if (message.equalsIgnoreCase("?pure"))
         {
             sendMessage(channel, "Pure damage is a form of magical damage that is not reduced by magic resistance, does not affect magic immune units, and deals normal damage to Ethereal units.");
         }
 
-        if (message.startsWith("?composite"))
+        if (message.equalsIgnoreCase("?composite"))
         {
             sendMessage(channel, "Composite aka mixed damage is physical damage that is also reduced by magic resistance. It goes through magic immunity but does not hit Ethereal units.");
         }
 
-        if (message.startsWith("?hpremoval"))
+        if (message.equalsIgnoreCase("?hpremoval"))
         {
             sendMessage(channel, "HP removal directly subtracts HP from the target. Therefore, it is not reduced by any resistances and goes through magic immunity.");
         }
 
-        if (message.startsWith("?universal"))
+        if (message.equalsIgnoreCase("?universal"))
         {
             sendMessage(channel, "Universal damage is reduced magic resistance and deals 1.4x damage to Ethereal units, but also goes through magic immunity.");
         }
 
-        if (message.startsWith("?physicalspells"))
+        if (message.equalsIgnoreCase("?physicalspells"))
         {
             sendMessage(channel, "The following spells deal physical damage: " + 
                 "Unstable Concotion, Counter Helix, Quill Spray, Penitence, Searing Arrows " + 
@@ -152,7 +163,7 @@ public class Dota2Bot extends PircBot {
                 "Anchor Smash, Walrus PUNCH!, Fury Swipes, The Swarm.");
         }
 
-        if (message.startsWith("?purespells"))
+        if (message.equalsIgnoreCase("?purespells"))
         {
             sendMessage(channel, "The following spells deal pure damage: "+
                 "Brain Sap, Test of Faith, Impetus, Sun Strike, Spiked Carapace, "+
@@ -161,13 +172,13 @@ public class Dota2Bot extends PircBot {
                 "Timber Chain, Whirling Death, Laser.");
         }
 
-        if (message.startsWith("?compositespells"))
+        if (message.equalsIgnoreCase("?compositespells"))
         {
             sendMessage(channel, "The following spells deal composite damage: "+
                 "Acid Spray, Wild Axes, Diabolic Edict, Spirit Bear backlash.");
         }
 
-        if (message.startsWith("?hpremovalspells"))
+        if (message.equalsIgnoreCase("?hpremovalspells"))
         {
             sendMessage(channel, "The following spells remove HP: "+
                 "Nightmare, Rupture, EMP, Heartstopper Aura, Soul Rip, "+
@@ -176,7 +187,7 @@ public class Dota2Bot extends PircBot {
                 "Armlet, Burning Spear, Overcharge, Soul Ring Sacrifice.");
         }
 
-        if (message.startsWith("?universalspells"))
+        if (message.equalsIgnoreCase("?universalspells"))
         {
             sendMessage(channel, "The following spells deal universal damage: "+
                 "Doom, Midnight Pulse, March of the Machines.");
@@ -219,13 +230,9 @@ public class Dota2Bot extends PircBot {
             }
 
             String heroIDnum = new String();
-            sendMessage(channel, levelAsStr);
-            sendMessage(channel, statAsStr);
-            if (levelAsInt < 1 || levelAsInt > 25)
-            {
-                sendMessage(channel, "Invalid level. Please enter a value between 1 and 25");
-                command = command + " ";
-            }
+            //sendMessage(channel, levelAsStr);
+            //sendMessage(channel, statAsStr);
+
             //accepted hero nicknames
             switch(heroselect)
             {
@@ -512,9 +519,24 @@ public class Dota2Bot extends PircBot {
             /* We don't want any output to trigger if anything starts with !,
             but we want to give an error when there is a valid command but the
             hero does not exist. */
+
+            //done//if invalid level and invalid hero, still return invalid hero
+            //if the command does not take level, return that the command does not take level, instead of returning that it's not a hero
+            //if level / statlevel are entered as Strings that cannot be parsed to numbers, or if they are doubles, return that level and statlevel must be integers
             if (selectedHero == null && isValidcommand().contains(command))
             {
                 sendMessage(channel, "That is not a hero. Are you using the correct spelling?");   
+            }
+            if (levelAsInt < 1 || levelAsInt > 25)
+            {
+                
+                sendMessage(channel, "Invalid level. Please enter a value between 1 and 25.");
+                //command = command + " ";
+            }
+            if (statLevelInt < 0 || statLevelInt > 10)
+            {
+                sendMessage(channel, "Invalid stat level. Please enter a value between 0 and 10.");
+                //command = command + " ";
             }
             
             //probably organize these better and rename some of them
@@ -563,7 +585,7 @@ public class Dota2Bot extends PircBot {
             String turnr8 = selectedHero.get("Turnrate").toString();
             
             //finds commands to return the relevant stats. 
-            //to do: attributes at different levels (!attr, but don't)
+            //to do: attributes at different levels (!attr, but don't
             //display + gain / level
             switch (command)
             {
@@ -632,6 +654,8 @@ public class Dota2Bot extends PircBot {
             valid.add("hpm");
             valid.add("bat");
             valid.add("armor");
+            valid.add("turnrate");
+            valid.add("tr");
             //valid.add("help");
             return valid;
         }

@@ -1,7 +1,7 @@
 {
     "1": {
         "ID": 1,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Earthshaker",
         "Alignment": 0,
         "Movespeed": 300,
@@ -33,7 +33,7 @@
     },
     "2": {
         "ID": 2,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Sven",
         "Alignment": 0,
         "Movespeed": 295,
@@ -65,7 +65,7 @@
     },
     "3": {
         "ID": 3,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Tiny",
         "Alignment": 0,
         "Movespeed": 285,
@@ -97,7 +97,7 @@
     },
     "4": {
         "ID": 4,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Kunkka",
         "Alignment": 0,
         "Movespeed": 300,
@@ -129,7 +129,7 @@
     },
     "5": {
         "ID": 5,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Beastmaster",
         "Alignment": 0,
         "Movespeed": 310,
@@ -161,7 +161,7 @@
     },
     "6": {
         "ID": 6,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Dragon Knight",
         "Alignment": 0,
         "Movespeed": 290,
@@ -193,7 +193,7 @@
     },
     "7": {
         "ID": 7,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Clockwerk",
         "Alignment": 0,
         "Movespeed": 315,
@@ -225,7 +225,7 @@
     },
     "8": {
         "ID": 8,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Omniknight",
         "Alignment": 0,
         "Movespeed": 305,
@@ -257,7 +257,7 @@
     },
     "9": {
         "ID": 9,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Huskar",
         "Alignment": 0,
         "Movespeed": 300,
@@ -289,7 +289,7 @@
     },
     "10": {
         "ID": 10,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Alchemist",
         "Alignment": 0,
         "Movespeed": 295,
@@ -321,7 +321,7 @@
     },
     "11": {
         "ID": 11,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Brewmaster",
         "Alignment": 0,
         "Movespeed": 300,
@@ -353,7 +353,7 @@
     },
     "12": {
         "ID": 12,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Treant Protector",
         "Alignment": 0,
         "Movespeed": 300,
@@ -385,7 +385,7 @@
     },
     "13": {
         "ID": 13,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Io",
         "Alignment": 0,
         "Movespeed": 295,
@@ -417,7 +417,7 @@
     },
     "14": {
         "ID": 14,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Centaur Warrunner",
         "Alignment": 0,
         "Movespeed": 300,
@@ -449,7 +449,7 @@
     },
     "15": {
         "ID": 15,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Timbersaw",
         "Alignment": 0,
         "Movespeed": 290,
@@ -481,7 +481,7 @@
     },
     "16": {
         "ID": 16,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Axe",
         "Alignment": 1,
         "Movespeed": 290,
@@ -513,7 +513,7 @@
     },
     "17": {
         "ID": 17,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Pudge",
         "Alignment": 1,
         "Movespeed": 285,
@@ -545,7 +545,7 @@
     },
     "18": {
         "ID": 18,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Sand King",
         "Alignment": 1,
         "Movespeed": 300,
@@ -577,7 +577,7 @@
     },
     "19": {
         "ID": 19,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Slardar",
         "Alignment": 1,
         "Movespeed": 300,
@@ -609,7 +609,7 @@
     },
     "20": {
         "ID": 20,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Tidehunter",
         "Alignment": 1,
         "Movespeed": 310,
@@ -641,7 +641,7 @@
     },
     "21": {
         "ID": 21,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Skeleton King",
         "Alignment": 1,
         "Movespeed": 300,
@@ -673,7 +673,7 @@
     },
     "22": {
         "ID": 22,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Lifestealer",
         "Alignment": 1,
         "Movespeed": 315,
@@ -705,7 +705,7 @@
     },
     "23": {
         "ID": 23,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Night Stalker",
         "Alignment": 1,
         "Movespeed": 295,
@@ -737,7 +737,7 @@
     },
     "24": {
         "ID": 24,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Doom",
         "Alignment": 1,
         "Movespeed": 290,
@@ -769,7 +769,7 @@
     },
     "25": {
         "ID": 25,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Spirit Breaker",
         "Alignment": 1,
         "Movespeed": 290,
@@ -801,7 +801,7 @@
     },
     "26": {
         "ID": 26,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Lycanthrope",
         "Alignment": 1,
         "Movespeed": 305,
@@ -833,7 +833,7 @@
     },
     "27": {
         "ID": 27,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Chaos Knight",
         "Alignment": 1,
         "Movespeed": 325,
@@ -865,7 +865,7 @@
     },
     "28": {
         "ID": 28,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Undying",
         "Alignment": 1,
         "Movespeed": 310,
@@ -897,7 +897,7 @@
     },
     "29": {
         "ID": 29,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Magnus",
         "Alignment": 1,
         "Movespeed": 315,
@@ -929,7 +929,7 @@
     },
     "30": {
         "ID": 30,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Anti-Mage",
         "Alignment": 0,
         "Movespeed": 315,
@@ -961,7 +961,7 @@
     },
     "31": {
         "ID": 31,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Drow Ranger",
         "Alignment": 0,
         "Movespeed": 300,
@@ -993,7 +993,7 @@
     },
     "32": {
         "ID": 32,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Juggernaut",
         "Alignment": 0,
         "Movespeed": 305,
@@ -1025,7 +1025,7 @@
     },
     "33": {
         "ID": 33,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Mirana",
         "Alignment": 0,
         "Movespeed": 300,
@@ -1057,7 +1057,7 @@
     },
     "34": {
         "ID": 34,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Morphling",
         "Alignment": 0,
         "Movespeed": 285,
@@ -1089,7 +1089,7 @@
     },
     "35": {
         "ID": 35,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Phantom Lancer",
         "Alignment": 0,
         "Movespeed": 290,
@@ -1121,7 +1121,7 @@
     },
     "36": {
         "ID": 36,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Vengeful Spirit",
         "Alignment": 0,
         "Movespeed": 295,
@@ -1153,7 +1153,7 @@
     },
     "37": {
         "ID": 37,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Riki",
         "Alignment": 0,
         "Movespeed": 300,
@@ -1185,7 +1185,7 @@
     },
     "38": {
         "ID": 38,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Sniper",
         "Alignment": 0,
         "Movespeed": 290,
@@ -1217,7 +1217,7 @@
     },
     "39": {
         "ID": 39,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Templar Assassin",
         "Alignment": 0,
         "Movespeed": 305,
@@ -1249,7 +1249,7 @@
     },
     "40": {
         "ID": 40,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Luna",
         "Alignment": 0,
         "Movespeed": 330,
@@ -1281,7 +1281,7 @@
     },
     "41": {
         "ID": 41,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Bounty Hunter",
         "Alignment": 0,
         "Movespeed": 315,
@@ -1313,7 +1313,7 @@
     },
     "42": {
         "ID": 42,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Ursa",
         "Alignment": 0,
         "Movespeed": 310,
@@ -1345,7 +1345,7 @@
     },
     "43": {
         "ID": 43,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Gyrocopter",
         "Alignment": 0,
         "Movespeed": 315,
@@ -1377,7 +1377,7 @@
     },
     "44": {
         "ID": 44,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Lone Druid",
         "Alignment": 0,
         "Movespeed": 315,
@@ -1409,7 +1409,7 @@
     },
     "45": {
         "ID": 45,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Naga Siren",
         "Alignment": 0,
         "Movespeed": 320,
@@ -1441,7 +1441,7 @@
     },
     "46": {
         "ID": 46,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Bloodseeker",
         "Alignment": 1,
         "Movespeed": 305,
@@ -1473,7 +1473,7 @@
     },
     "47": {
         "ID": 47,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Shadow Fiend",
         "Alignment": 1,
         "Movespeed": 305,
@@ -1505,7 +1505,7 @@
     },
     "48": {
         "ID": 48,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Razor",
         "Alignment": 1,
         "Movespeed": 295,
@@ -1537,7 +1537,7 @@
     },
     "49": {
         "ID": 49,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Venomancer",
         "Alignment": 1,
         "Movespeed": 290,
@@ -1569,7 +1569,7 @@
     },
     "50": {
         "ID": 50,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Faceless Void",
         "Alignment": 1,
         "Movespeed": 300,
@@ -1601,7 +1601,7 @@
     },
     "51": {
         "ID": 51,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Phantom Assassin",
         "Alignment": 1,
         "Movespeed": 310,
@@ -1633,7 +1633,7 @@
     },
     "52": {
         "ID": 52,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Viper",
         "Alignment": 1,
         "Movespeed": 285,
@@ -1665,7 +1665,7 @@
     },
     "53": {
         "ID": 53,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Clinkz",
         "Alignment": 1,
         "Movespeed": 300,
@@ -1697,7 +1697,7 @@
     },
     "54": {
         "ID": 54,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Broodmother",
         "Alignment": 1,
         "Movespeed": 295,
@@ -1729,7 +1729,7 @@
     },
     "55": {
         "ID": 55,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Weaver",
         "Alignment": 1,
         "Movespeed": 290,
@@ -1761,7 +1761,7 @@
     },
     "56": {
         "ID": 56,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Spectre",
         "Alignment": 1,
         "Movespeed": 295,
@@ -1793,7 +1793,7 @@
     },
     "57": {
         "ID": 57,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Meepo",
         "Alignment": 1,
         "Movespeed": 305,
@@ -1825,7 +1825,7 @@
     },
     "58": {
         "ID": 58,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Nyx Assassin",
         "Alignment": 1,
         "Movespeed": 300,
@@ -1857,7 +1857,7 @@
     },
     "59": {
         "ID": 59,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Slark",
         "Alignment": 1,
         "Movespeed": 305,
@@ -1889,7 +1889,7 @@
     },
     "60": {
         "ID": 60,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Medusa",
         "Alignment": 1,
         "Movespeed": 290,
@@ -1921,7 +1921,7 @@
     },
     "61": {
         "ID": 61,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Crystal Maiden",
         "Alignment": 0,
         "Movespeed": 280,
@@ -1953,7 +1953,7 @@
     },
     "62": {
         "ID": 62,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Puck",
         "Alignment": 0,
         "Movespeed": 295,
@@ -1985,7 +1985,7 @@
     },
     "63": {
         "ID": 63,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Storm Spirit",
         "Alignment": 0,
         "Movespeed": 295,
@@ -2017,7 +2017,7 @@
     },
     "64": {
         "ID": 64,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Windrunner",
         "Alignment": 0,
         "Movespeed": 295,
@@ -2049,7 +2049,7 @@
     },
     "65": {
         "ID": 65,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Zeus",
         "Alignment": 0,
         "Movespeed": 295,
@@ -2081,7 +2081,7 @@
     },
     "66": {
         "ID": 66,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Lina",
         "Alignment": 0,
         "Movespeed": 295,
@@ -2113,7 +2113,7 @@
     },
     "67": {
         "ID": 67,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Shadow Shaman",
         "Alignment": 0,
         "Movespeed": 285,
@@ -2145,7 +2145,7 @@
     },
     "68": {
         "ID": 68,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Tinker",
         "Alignment": 0,
         "Movespeed": 305,
@@ -2177,7 +2177,7 @@
     },
     "69": {
         "ID": 69,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Nature's Prophet",
         "Alignment": 0,
         "Movespeed": 295,
@@ -2209,7 +2209,7 @@
     },
     "70": {
         "ID": 70,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Enchantress",
         "Alignment": 0,
         "Movespeed": 310,
@@ -2241,7 +2241,7 @@
     },
     "71": {
         "ID": 71,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Jakiro",
         "Alignment": 0,
         "Movespeed": 290,
@@ -2273,7 +2273,7 @@
     },
     "72": {
         "ID": 72,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Chen",
         "Alignment": 0,
         "Movespeed": 300,
@@ -2305,7 +2305,7 @@
     },
     "73": {
         "ID": 73,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Silencer",
         "Alignment": 0,
         "Movespeed": 300,
@@ -2337,7 +2337,7 @@
     },
     "74": {
         "ID": 74,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Ogre Magi",
         "Alignment": 0,
         "Movespeed": 295,
@@ -2369,7 +2369,7 @@
     },
     "75": {
         "ID": 75,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Rubick",
         "Alignment": 0,
         "Movespeed": 290,
@@ -2401,7 +2401,7 @@
     },
     "76": {
         "ID": 76,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Disruptor",
         "Alignment": 0,
         "Movespeed": 300,
@@ -2433,7 +2433,7 @@
     },
     "77": {
         "ID": 77,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Keeper of the Light",
         "Alignment": 0,
         "Movespeed": 315,
@@ -2465,7 +2465,7 @@
     },
     "78": {
         "ID": 78,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Bane",
         "Alignment": 1,
         "Movespeed": 315,
@@ -2497,7 +2497,7 @@
     },
     "79": {
         "ID": 79,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Lich",
         "Alignment": 1,
         "Movespeed": 315,
@@ -2529,7 +2529,7 @@
     },
     "80": {
         "ID": 80,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Lion",
         "Alignment": 1,
         "Movespeed": 290,
@@ -2561,7 +2561,7 @@
     },
     "81": {
         "ID": 81,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Witch Doctor",
         "Alignment": 1,
         "Movespeed": 305,
@@ -2593,7 +2593,7 @@
     },
     "82": {
         "ID": 82,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Enigma",
         "Alignment": 1,
         "Movespeed": 300,
@@ -2625,7 +2625,7 @@
     },
     "83": {
         "ID": 83,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Necrolyte",
         "Alignment": 1,
         "Movespeed": 290,
@@ -2657,7 +2657,7 @@
     },
     "84": {
         "ID": 84,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Warlock",
         "Alignment": 1,
         "Movespeed": 295,
@@ -2689,7 +2689,7 @@
     },
     "85": {
         "ID": 85,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Queen of Pain",
         "Alignment": 1,
         "Movespeed": 300,
@@ -2721,7 +2721,7 @@
     },
     "86": {
         "ID": 86,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Death Prophet",
         "Alignment": 1,
         "Movespeed": 280,
@@ -2753,7 +2753,7 @@
     },
     "87": {
         "ID": 87,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Pugna",
         "Alignment": 1,
         "Movespeed": 320,
@@ -2785,7 +2785,7 @@
     },
     "88": {
         "ID": 88,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Dazzle",
         "Alignment": 1,
         "Movespeed": 305,
@@ -2817,7 +2817,7 @@
     },
     "89": {
         "ID": 89,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Leshrac",
         "Alignment": 1,
         "Movespeed": 315,
@@ -2849,7 +2849,7 @@
     },
     "90": {
         "ID": 90,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Dark Seer",
         "Alignment": 1,
         "Movespeed": 300,
@@ -2881,7 +2881,7 @@
     },
     "91": {
         "ID": 91,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Batrider",
         "Alignment": 1,
         "Movespeed": 290,
@@ -2913,7 +2913,7 @@
     },
     "92": {
         "ID": 92,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Ancient Apparition",
         "Alignment": 1,
         "Movespeed": 295,
@@ -2945,7 +2945,7 @@
     },
     "93": {
         "ID": 93,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Invoker",
         "Alignment": 1,
         "Movespeed": 280,
@@ -2977,7 +2977,7 @@
     },
     "94": {
         "ID": 94,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Outworld Devourer",
         "Alignment": 1,
         "Movespeed": 315,
@@ -3009,7 +3009,7 @@
     },
     "95": {
         "ID": 95,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Shadow Demon",
         "Alignment": 1,
         "Movespeed": 295,
@@ -3041,7 +3041,7 @@
     },
     "96": {
         "ID": 96,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Visage",
         "Alignment": 1,
         "Movespeed": 295,
@@ -3073,7 +3073,7 @@
     },
     "97": {
         "ID": 97,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Troll Warlord",
         "Alignment": 0,
         "Movespeed": 305,
@@ -3105,7 +3105,7 @@
     },
     "98": {
         "ID": 98,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Tusk",
         "Alignment": 0,
         "Movespeed": 305,
@@ -3137,7 +3137,7 @@
     },
     "99": {
         "ID": 99,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Bristleback",
         "Alignment": 0,
         "Movespeed": 295,
@@ -3169,7 +3169,7 @@
     },
     "100": {
         "ID": 100,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Skywrath Mage",
         "Alignment": 0,
         "Movespeed": 315,
@@ -3201,7 +3201,7 @@
     },
     "101": {
         "ID": 101,
-        "Patch": "6.78",
+        "Patch": "6.78c",
         "Name": "Elder Titan",
         "Alignment": 0,
         "Movespeed": 315,
